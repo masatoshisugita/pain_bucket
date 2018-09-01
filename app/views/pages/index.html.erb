@@ -1,0 +1,79 @@
+<div class="main-area">
+ <div class="content">
+  <div class="main-title">
+    <h1>pain bucket</h1>
+    <p>〜病気になった時のためのSNSサイト〜</p>
+    <p><%= link_to 'pain bucketとは','http://localhost:3000/pages/about',class: "contribution" %></p>
+  </div>
+
+    <div class="main-link">
+     <div class="user-name">
+      <% if @current_user %>
+        <p>ログイン名</p>
+        <%= link_to(@current_user.name,"/users/#{@current_user.id}") %>
+    　</div>
+    　<div class="contribution-wrapper">
+        <p class="btn contribution-left"><%= link_to '投稿一覧はこちら','http://localhost:3000/posts/index' %></p>
+        <p class="btn contribution-right"><%= link_to 'ログアウトはこちら','http://localhost:3000/users/logout' %></p>
+      </div>
+      <% end %>
+      <% if @current_user == nil %>
+      <div class="user-login">
+        <div class=" btn singnup-wrapper-modal">新規登録はこちら</div>
+        <div class="btn login-wrapper-modal">ログインはこちら</div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+ <div class="modal" id="signup-modal">
+   <div class="main-area">
+     <div class="main-wrapper-area">
+       <div class="main-content">
+         <div class="close-modal">
+           <i class="fa fa-2x fa-times"></i>
+         </div>
+         <h1>ユーザー登録</h1>
+
+         <%= form_tag ("/users/create") do  %>
+          <div class="form">
+            <p>名前</p>
+            <p><input type="text" name = "name"></p>
+          </div>
+          <div class="form">
+            <p>パスワード</p>
+            <p><input name = "password" type="password"></p>
+            <p><input type ="submit" value="登録" class="submit"></p>
+          </div>
+         <% end %>
+       </div>
+     </div>
+   </div>
+ </div>
+
+<div class="modal" id="login-modal">
+  <div class="main-area">
+    <div class="main-wrapper-area">
+      <div class="main-content">
+        <div class="close-modal">
+         <i class="fa fa-2x fa-times"></i>
+        </div>
+      <h1>ログイン画面</h1>
+
+        <%= form_tag ("/users/login") do  %>
+          <div class="form">
+            <p>名前</p>
+            <p><input type="text" name = "name"></p>
+          </div>
+          <div class="form">
+            <p>パスワード</p>
+            <p><input name = "password" type="password"></p>
+            <p><input type ="submit" value="ログイン" class="submit"></p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="main-area">
+<div class="content">
+  <div class="main-content">
+    <% @posts.each do |post| %>
+    <div class="main-post-content">
+      <p1>名前</p>
+      <p><%= post.name %></p>
+      <p1>病名</p1>
+      <p><%= post.sick_name %></p>
+      <p1>期間</p1>
+      <p><%= post.period %></p>
+      <p1>内容</p1>
+      <p><%= post.content %></p>
+    </div>
+    <% end %>
+  </div>
+</div>
+</div>

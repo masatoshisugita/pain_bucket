@@ -1,0 +1,34 @@
+<div class="main-area">
+<div class="content">
+  <h1><%= @user.name %></h1>
+  <p style="text-align:center"><img src="<%= "/#{@user.image}" %>" width="200" height="200"></p>
+
+  <% if @user == @current_user %>
+  <div class="main-content">
+    <p><%= link_to('ログイン名とパスワードを変更',"/users/#{@user.id}/edit") %></p>
+    <p><%= link_to('いいね！一覧',"/users/#{@user.id}/likes") %></p>
+
+  </div>
+  <% end %>
+
+  <p2><%= @user.name %> の投稿一覧</p2>
+  <div class="main-content">
+    <% @posts.each do |post| %>
+    <div class="main-post-content">
+     <div class="float">
+      <p1>名前</p>
+      <p><%= post.name %></p>
+      <p1>病名</p1>
+      <p><%= post.sick_name %></p>
+      <p1>期間</p1>
+      <p><%= post.period %></p>
+      <p1>内容</p1>
+      <p><%= post.content %></p>
+      </div>
+      <% if @user == @current_user %>
+      <div class="detail"><%= link_to("詳細","/posts/#{post.id}") %></div>
+      <% end %>
+    </div>
+    <% end %>
+</div>
+</div>

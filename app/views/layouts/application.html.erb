@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sickness3</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <%= javascript_include_tag 'application' %>
+
+  </head>
+
+
+  <body>
+    <header>
+        <div class="top">
+          <div class="main-contribution">
+          <%= link_to 'TOP','http://localhost:3000',:style=>"color:white;",class: "contribution" %>
+          <%= link_to 'pain bucketとは','http://localhost:3000/pages/about', :style=>"color:white;",class: "contribution" %>
+
+        </div>
+
+        <div class="main-search">
+          <div class="btn-contribution">
+          <% if @current_user %>
+            <%= link_to '投稿はこちら','http://localhost:3000/posts/new',:style=>"color:white;" %>
+          <% end %>
+        </div>
+          <div class ="btn-search">
+          <%= form_tag("/posts/search", :method => 'get') do %>
+          <p><span style="color:white">病名</span>
+            <%= text_field_tag :search, params[:search] %>
+            <%= submit_tag "検索" , :sick_name => nil %>
+          </p>
+          <% end %>
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+
+    <% if flash[:notice] %>
+      <div class="flash">
+        <p><%= flash[:notice] %></p>
+      </div>
+    <% end %>
+
+
+  <%= yield %>
+
+
+  </body>
+</html>

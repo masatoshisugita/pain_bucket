@@ -1,0 +1,19 @@
+<div class="main-area">
+  <div class="content">
+    <h1>投稿画面</h1>
+    <div class="main-conten-wrapper">
+      <div class="main-content">
+        <%= form_tag ("/posts/create") do %>
+        <%= hidden_field_tag :name, @current_user.name %>
+        <p>病名</p>
+        <p><input type ="text" name = "sick_name"></p>
+        <p>期間</p>
+        <p><input type="text" name = "period"></p>
+        <p>内容</p>
+        <p><textarea name = "content" rows="4" cols="30"></textarea></p>
+        <p><input type ="submit" value="投稿" class="submit"></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
