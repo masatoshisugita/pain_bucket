@@ -16,15 +16,6 @@ body {
 body > div.main-area {
 　height: auto;
 }
- //footer {
-   //width: 100vw;
-   //height: 30px;
-   //position: fixed;
-   //bottom: 0;
-   //margin-bottom: 0;
-   //background-color: green;
-   //z-index: 10;
- //}
 
  .btn {
    display: inline-block;
@@ -43,9 +34,10 @@ body > div.main-area {
    cursor: pointer;
    background-color: #239b76;
    font-size: 25px;
+   color: white;
    margin-right: 20px;
-
  }
+
 .modal{
   position: fixed;
   top: 0;
@@ -60,6 +52,7 @@ body > div.main-area {
 .login-wrapper-modal {
   cursor: pointer;
   background-color: #136FFF;
+  color: white;
   font-size: 25px;
 }
 
@@ -79,8 +72,6 @@ body > div.main-area {
   right: 12px;
   cursor: pointer;
 }
-
-
 
 .top {
    height: 60px;
@@ -137,7 +128,6 @@ body > div.main-area {
     margin: 40px 0 30px 200px;
     width: 1000px;
     height: auto;
-    //background-image: image-url("blown.jpg");
     background-color: #FFDDFF;
     background-size: cover;
     position: absolute;
@@ -145,7 +135,7 @@ body > div.main-area {
     border-radius: 40px;
   }
 
-.content h1 {
+.content h1,h3 {
   text-align: center;
 }
 
@@ -207,6 +197,15 @@ body > div.main-area {
   border-radius: 8px;
   margin-top: 20px;
 }
+
+.login-submit {
+  background-color: #136FFF;
+  color: #FFFFFF;
+  width: 50%;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
 .main-content p1 {
   font-size: 30px;
   display: block;
@@ -225,7 +224,23 @@ body > div.main-area {
 }
 
 .main-content p1 {
+  text-align: center;
+  font-size: 30px;
+}
+
+.main-content ol {
+  position: relative;
+  float: left;
+  left: 50%;
+  margin-bottom: 30px;
+
+}
+
+.main-content li {
+  padding-top: 30px;
   font-size: 25px;
+  position: relative;
+  left: -50%;
 }
 
 .main-post-content {
@@ -236,13 +251,8 @@ body > div.main-area {
   margin-bottom: 30px;
 }
 
-.float {
-  //float: left;
-}
-
 .detail {
   font-size: 20px;
-  //float: right;
 }
 
 .unlike-like-btn {
