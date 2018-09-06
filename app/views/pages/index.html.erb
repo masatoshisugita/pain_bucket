@@ -13,8 +13,8 @@
         <%= link_to(@current_user.name,"/users/#{@current_user.id}") %>
     　</div>
     　<div class="contribution-wrapper">
-        <p class="btn contribution-left"><%= link_to '投稿一覧はこちら','http://localhost:3000/posts/index' %></p>
-        <p class="btn contribution-right"><%= link_to 'ログアウトはこちら','http://localhost:3000/users/logout' %></p>
+        <p class="btn contribution-left"><%= link_to '投稿一覧はこちら','http://localhost:3000/posts/index' ,:style=>"color:white;" %></p>
+        <p class="btn contribution-right"><%= link_to '投稿はこちら','http://localhost:3000/posts/new',:style=>"color:white;" %></p>
       </div>
       <% end %>
       <% if @current_user == nil %>

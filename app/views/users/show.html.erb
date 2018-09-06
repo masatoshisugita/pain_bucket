@@ -26,9 +26,9 @@
       <p><%= post.content %></p>
       </div>
       <% if @user == @current_user %>
-      <div class="detail"><%= link_to("詳細","/posts/#{post.id}") %></div>
+      <div class="detail"><%= link_to("詳細はこちら","/posts/#{post.id}",:style=>"color:black;" ) %></div>
       <% end %>
     </div>
     <% end %>
-</div>
+  </div>
 </div>

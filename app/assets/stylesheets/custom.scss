@@ -18,13 +18,14 @@ body > div.main-area {
 　height: auto;
 }
 
- .btn {
+.btn {
    display: inline-block;
    border-radius: 8px;
  }
 
  .contribution-left {
-   background-color: #9BF9CC;
+   background-color: #FFCC00;
+   margin-right: 30px;
  }
 
  .contribution-right {
@@ -106,6 +107,7 @@ body > div.main-area {
 .contribution-wrapper p{
   font-size: 25px;
 }
+
 .btn-contribution {
   float: left;
   margin-right: 40px;
@@ -139,6 +141,11 @@ body > div.main-area {
 
 .content h1,h3 {
   text-align: center;
+}
+
+.content h3{
+  color: red;
+  font-weight: 700;
 }
 
 .content p2 {
@@ -207,12 +214,16 @@ body > div.main-area {
   border-radius: 8px;
   margin-top: 20px;
 }
+.main-content p{
+  font-size: 30px;
+}
 
 .main-content p1 {
-  font-size: 30px;
+  font-size: 20px;
   display: block;
   margin-top: 40px;
   padding-bottom: 10px;
+  text-align: center;
 }
 
 .main-content p2 {
@@ -220,15 +231,8 @@ body > div.main-area {
   display: inline;
   padding-bottom: 60px;
 }
-.main-content p {
-  font-size: 30px;
-  padding-top: 10px;
-}
 
-.main-content p1 {
-  text-align: center;
-  font-size: 30px;
-}
+
 
 .main-content ol {
   position: relative;
@@ -263,6 +267,10 @@ body > div.main-area {
 
 .like-btn {
   color: #A9A9A9;
+}
+
+.detail {
+  padding-left: 750px;
 }
 
 .form p{

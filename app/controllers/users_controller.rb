@@ -49,7 +49,7 @@ class UsersController < ApplicationController
       redirect_to("/")
     else
       flash.now[:notice] = "ログインに失敗しました"
-      render("users/login_form")
+      render("pages/index")
     end
   end
 
