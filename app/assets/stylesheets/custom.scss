@@ -6,7 +6,8 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-image: image-url("blown.jpg");
+  background-image: image-url("notebook-731212_1920.jpg");
+  background-size: cover;
 }
 
 .main-area {
@@ -128,7 +129,8 @@ body > div.main-area {
     margin: 40px 0 30px 200px;
     width: 1000px;
     height: auto;
-    background-color: #FFDDFF;
+    //background-color: #FFDDFF;
+    background-color: rgba(106,192,255, 0.6);
     background-size: cover;
     position: absolute;
     top: 60px;
