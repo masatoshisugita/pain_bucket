@@ -19,15 +19,15 @@
     <header>
         <div class="top">
           <div class="main-contribution">
-          <%= link_to 'TOP','http://localhost:3000',:style=>"color:white;",class: "contribution" %>
-          <%= link_to 'pain bucketとは','http://localhost:3000/pages/about', :style=>"color:white;",class: "contribution" %>
+          <%= link_to 'TOP','/',:style=>"color:white;",class: "contribution" %>
+          <%= link_to 'pain bucketとは','/pages/about', :style=>"color:white;",class: "contribution" %>
 
         </div>
 
         <div class="main-search">
           <div class="btn-contribution">
           <% if @current_user %>
-            <%= link_to 'ログアウトはこちら','http://localhost:3000/users/logout', :style=>"color:white;" %>
+            <%= link_to 'ログアウトはこちら','/users/logout', :style=>"color:white;" %>
           <% end %>
         </div>
           <div class ="btn-search">
