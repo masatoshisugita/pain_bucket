@@ -1,18 +1,26 @@
-html {
-  height: 100%;
-}
 
 body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
+  width: 100%;
   background-image: image-url("notebook-731212_1920.jpg");
   background-size: cover;
 }
 
 .main-area {
-  width: 100vw;
+  width: 60%;
+  margin: 0 auto;
+  background-image: image-url("notebook-731212_1920.jpg");
 }
+
+.content {
+    width: 60%;
+    height: auto;
+    margin-top: 40px;
+    background-color: rgba(106,192,255, 0.6);
+    background-size: cover;
+    position: absolute;
+    top: 60px;
+    border-radius: 40px;
+  }
 
 body > div.main-area {
 　height: auto;
@@ -127,17 +135,7 @@ body > div.main-area {
   margin-right: 30px;
 }
 
-.content {
-    margin: 40px 0 30px 200px;
-    width: 1000px;
-    height: auto;
-    //background-color: #FFDDFF;
-    background-color: rgba(106,192,255, 0.6);
-    background-size: cover;
-    position: absolute;
-    top: 60px;
-    border-radius: 40px;
-  }
+
 
 .content h1,h3 {
   text-align: center;
