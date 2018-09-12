@@ -11,6 +11,8 @@
     <% @posts.each do |post| %>
     <div class="main-post-content">
      <div class="float">
+      <% user = User.find_by(id: post.user_id) %>
+        <img src="<%= "/#{user.image}" %>"width="120" height="120">
       <p1>名前</p>
       <p><%= link_to(post.name,"/users/#{post.user_id}") %></p>
       <p1>病名</p1>

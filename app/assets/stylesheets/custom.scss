@@ -3,6 +3,7 @@ body {
   width: 100%;
   background-image: image-url("notebook-731212_1920.jpg");
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .main-area {
@@ -25,6 +26,7 @@ body {
 .content img{
   border-radius: 40px;
   background-color: white;
+  margin-top: 15px;
 }
 
 .btn {
@@ -136,11 +138,11 @@ body {
   margin-right: 30px;
 }
 
-.content h1,h3 {
+.content h1,h2 {
   text-align: center;
 }
 
-.content h3{
+.content h2{
   color: red;
   font-weight: 700;
 }
