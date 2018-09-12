@@ -1,17 +1,17 @@
 <div class="main-area">
-<div class="content">
+ <div class="content">
   <h1><%= @current_user.name %></h1>
- <div class="main-content">
 
+  <div class="main-content">
   <%= form_tag("/users/#{@user.id}/update" ,{multipart: true}) do %>
    <p>画像</p>
-   <input name="image" type="file">
+   <div class="straight"><input name="image" type="file"></div>
    <p>ログイン名</p>
    <textarea name ="name" rows="1"><%= @user.name %></textarea>
    <p>パスワード</p>
-   <textarea name ="password" rows="1"><%= @user.password %></textarea>
-   <input type="submit" value="変更">
-   <% end %>
+   <textarea name ="password" rows="1" type="password"><%= @user.password %></textarea>
+   <p><input type="submit" value="変更"></p>
+  <% end %>
+  </div>
  </div>
-</div>
 </div>

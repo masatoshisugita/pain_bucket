@@ -17,7 +17,7 @@
 //= require bootstrap-sprockets
 $(function(){
 
-  $(".bucket").css("display","none").fadeIn("slow");
+  $(".bucket").css("display","none").fadeIn();
 
   $(".singnup-wrapper-modal").click(function(){
 

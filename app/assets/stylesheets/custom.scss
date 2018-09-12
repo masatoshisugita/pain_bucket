@@ -22,8 +22,9 @@ body {
     border-radius: 40px;
   }
 
-body > div.main-area {
-　height: auto;
+.content img{
+  border-radius: 40px;
+  background-color: white;
 }
 
 .btn {
@@ -135,8 +136,6 @@ body > div.main-area {
   margin-right: 30px;
 }
 
-
-
 .content h1,h3 {
   text-align: center;
 }
@@ -151,15 +150,14 @@ body > div.main-area {
   padding-left: 30px;
 }
 .main-title h1 {
-    font-size:80px;
-    text-align: center;
-  }
+  font-size:80px;
+  text-align: center;
+}
 
- .main-title p {
-   text-align: center;
-   font-size: 30px;
-
- }
+.main-title p {
+  text-align: center;
+  font-size: 30px;
+}
 
 .main-link {
   font-size: 25px;
@@ -191,10 +189,14 @@ body > div.main-area {
 
 .main-content {
   margin: 45px 30px 100px 30px;
+  text-align: center;
 }
 
-.main-conten-wrapper {
+.straight{
   text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: inline-block;
 }
 
 .submit {
@@ -214,6 +216,7 @@ body > div.main-area {
 }
 .main-content p{
   font-size: 30px;
+  margin-top: 20px;
 }
 
 .main-content p1 {
@@ -229,8 +232,6 @@ body > div.main-area {
   display: inline;
   padding-bottom: 60px;
 }
-
-
 
 .main-content ol {
   position: relative;
@@ -268,7 +269,7 @@ body > div.main-area {
 }
 
 .detail {
-  padding-left: 750px;
+  //float: right;
 }
 
 .form p{
