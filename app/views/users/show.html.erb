@@ -4,7 +4,7 @@
   <p style="text-align:center"><img src="<%= "/#{@user.image}" %>" width="120" height="120"></p>
 
   <% if @user == @current_user %>
-  <div class="main-content">
+  <div class="editrial">
     <p><%= link_to('ログイン名とパスワードを変更',"/users/#{@user.id}/edit") %></p>
     <p><%= link_to('いいね！一覧',"/users/#{@user.id}/likes") %></p>
   </div>
@@ -14,21 +14,38 @@
   <div class="main-content">
     <% @posts.each do |post| %>
     <div class="main-post-content">
-     <div class="float">
-      <img src="<%= "/#{@user.image}" %>"width="120" height="120">
-      <p1>名前</p>
-      <p><%= post.name %></p>
-      <p1>病名</p1>
-      <p><%= post.sick_name %></p>
-      <p1>期間</p1>
-      <p><%= post.period %></p>
-      <p1>内容</p1>
-      <p><%= post.content %></p>
+      <div class="float"><img src="<%= "/#{@user.image}" %>"width="120" height="120"></div>
+
+     <div class="head-index">
+       <div class="index-body">
+       <div class="head-index">名前</div>
+       <div class="head-index"><p><%= post.name %></p></div>
+     </div>
+
+     <div class="index-body">
+       <div class="head-index">病名</div>
+       <div class="head-index"><p><%= post.sick_name %></p></div>
+     </div>
+
+      <div class="index-body">
+        <div class="head-index">期間</div>
+        <div class="head-index"><p><%= post.period %></p></div>
       </div>
+
+      </div>
+
+      <div>
+        <div class="index-body"><p1>内容</p1></div>
+          <p><%= post.content %></p>
+        </div>
+
       <% if @user == @current_user %>
-      <div class="detail"><%= link_to("詳細はこちら","/posts/#{post.id}",:style=>"color:black;" ) %></div>
+      <div class="detail"><%= link_to("詳細","/posts/#{post.id}",:style=>"color:black;" ) %></div>
       <% end %>
-    </div>
+      </div>
+
     <% end %>
+  </div>
+
   </div>
 </div>

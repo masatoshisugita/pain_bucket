@@ -10,6 +10,9 @@ class UsersController < ApplicationController
     if @user.save
       flash[:notice] = "登録しました"
       redirect_to("/")
+    else
+      flash[:notice] = "登録に失敗しました"
+      render("pages/index")
     end
   end
 

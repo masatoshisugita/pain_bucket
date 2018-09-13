@@ -138,6 +138,10 @@ body {
   margin-right: 30px;
 }
 
+.top-index{
+  margin-right: 30px;
+}
+
 .content h1,h2 {
   text-align: center;
 }
@@ -191,6 +195,9 @@ body {
 
 .main-content {
   margin: 45px 30px 100px 30px;
+}
+
+.main-content-wrapper{
   text-align: center;
 }
 
@@ -204,7 +211,7 @@ body {
 .submit {
   background-color: #2E8B57;
   color: #FFFFFF;
-  width: 50%;
+  width: 40%;
   border-radius: 8px;
   margin-top: 20px;
 }
@@ -217,8 +224,8 @@ body {
   margin-top: 20px;
 }
 .main-content p{
-  font-size: 30px;
-  margin-top: 20px;
+  font-size: 20px;
+  margin-left: 30px;
 }
 
 .main-content p1 {
@@ -226,7 +233,26 @@ body {
   display: block;
   margin-top: 40px;
   padding-bottom: 10px;
-  text-align: center;
+  //text-align: center;
+}
+
+.float {
+  float: left;
+}
+
+.head-index{
+  font-size: 15px;
+  margin-left: 10px;
+  margin-top: 5px;
+  float: left;
+
+}
+
+.index-body {
+  margin-left: 10px;
+  padding-top: 5px;
+  clear: left;
+
 }
 
 .main-content p2 {
@@ -254,12 +280,16 @@ body {
   border: solid 6px #777777;
   border-radius: 10px;
   padding-left: 45px;
-  padding-bottom: 20px;
+  padding-right: 20px;
+  padding-bottom: 50px;
   margin-bottom: 30px;
 }
 
 .detail {
   font-size: 20px;
+  padding-top: 10px;
+  width: 10%;
+  float: right;
 }
 
 .unlike-like-btn {
@@ -270,10 +300,22 @@ body {
   color: #A9A9A9;
 }
 
-.detail {
-  //float: right;
+.like{
+  margin-bottom: 30px;
+  float: right;
 }
 
 .form p{
   font-size: 25px;
+}
+
+.treet {
+  font-size: 30px;
+  text-align: center;
+}
+
+.editrial{
+  font-size: 30px;
+  margin-top: 20px;
+  text-align: center;
 }

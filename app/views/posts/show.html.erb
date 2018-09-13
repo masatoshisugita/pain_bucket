@@ -1,9 +1,9 @@
 <div class="main-area">
-<div class="content">
-  <h1>詳細</h1>
-  <div class="main-content">
-    <p><%= link_to("変更","/posts/#{@post.id}/edit") %></p>
-    <p><%= link_to("削除","/posts/#{@post.id}/delete",{method: "post"}) %></p>
+  <div class="content">
+    <h1>詳細</h1>
+    <div class="main-content">
+    <div class="editrial"><%= link_to("投稿の変更","/posts/#{@post.id}/edit") %></div>
+    <div class="editrial"><%= link_to("投稿の削除","/posts/#{@post.id}/delete",{method: "post"}) %></div>
+    </div>
   </div>
-</div>
 </div>
