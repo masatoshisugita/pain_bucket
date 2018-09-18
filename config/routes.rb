@@ -27,5 +27,10 @@ Rails.application.routes.draw do
   post 'likes/:post_id/destroy' => 'likes#destroy'
   get 'users/:id/likes' => 'users#likes'
 
+  get 'users/:id/following' => 'users#following'
+  get 'users/:id/followers' => 'users#followers'
+
+  resources :relationships, only: [:create, :destroy]
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

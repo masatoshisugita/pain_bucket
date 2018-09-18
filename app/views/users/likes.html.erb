@@ -9,8 +9,9 @@
 
   <div class="main-content">
     <% @likes.each do |like| %>
+
      <% post = Post.find_by(id: like.post_id) %>
-    <div class="main-post-content">
+      <div class="main-post-content">
        <% user = User.find_by(id: like.user_id) %>
           <div class="float"><img src="<%= "/#{user.image}" %>" width="120" height="120"></div>
 
@@ -25,34 +26,33 @@
             <div class="head-index"><p><%= post.sick_name %></p></div>
           </div>
 
-           <div class="index-body">
+          <div class="index-body">
              <div class="head-index">期間</div>
              <div class="head-index"><p><%= post.period %></p></div>
-           </div>
+          </div>
+          </div>
 
-           </div>
+          <div>
+            <div class="index-body"><p1>内容</p1></div>
+            <p><%= post.content %></p>
+          </div>
 
-           <div>
-             <div class="index-body"><p1>内容</p1></div>
-              <p><%= post.content %></p>
-           </div>
+          <div class="like">
+            <% if Like.find_by(user_id: @current_user.id,post_id: post.id) %>
+              <%= link_to("/likes/#{post.id}/destroy" , {method: "post"}) do %>
+              <span><i class="fa fa-heart unlike-like-btn fa-2x"></i></span>
+              <% end %>
+            <% else %>
+              <%= link_to("/likes/#{post.id}/create" , {method: "post"}) do %>
+              <span><i class="fa fa-heart like-btn fa-2x"></i></span>
+              <% end %>
+            <% end %>
+            <% likes_count = Like.where(post_id: post.id).count %>
+            <%= likes_count %>
+          </div>
 
-      <div class="like">
-       <% if Like.find_by(user_id: @current_user.id,post_id: post.id) %>
-         <%= link_to("/likes/#{post.id}/destroy" , {method: "post"}) do %>
-          <span><i class="fa fa-heart unlike-like-btn fa-2x"></i></span>
-         <% end %>
-       <% else %>
-         <%= link_to("/likes/#{post.id}/create" , {method: "post"}) do %>
-          <span><i class="fa fa-heart like-btn fa-2x"></i></span>
-         <% end %>
-       <% end %>
-
-      <% likes_count = Like.where(post_id: post.id).count %>
-      <%= likes_count %>
-    </div>
-     </div>
-   <% end %>
+      </div>
+   　<% end %>
   </div>
 
  </div>

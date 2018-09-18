@@ -3,12 +3,20 @@
   <h1><%= @user.name %></h1>
   <p style="text-align:center"><img src="<%= "/#{@user.image}" %>" width="120" height="120"></p>
 
+
   <% if @user == @current_user %>
   <div class="editrial">
     <p><%= link_to('ログイン名とパスワードを変更',"/users/#{@user.id}/edit") %></p>
     <p><%= link_to('いいね！一覧',"/users/#{@user.id}/likes") %></p>
   </div>
   <% end %>
+
+  <div class="follow-user">
+    <%= render 'follow_form' %>
+    <%= render 'stats' %>
+  </div>
+
+
 
   <p2><%= @user.name %> の投稿一覧</p2>
   <div class="main-content">

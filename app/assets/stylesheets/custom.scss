@@ -10,6 +10,7 @@ body {
   width: 60%;
   margin: 0 auto;
   background-image: image-url("notebook-731212_1920.jpg");
+  background-size: cover;
 }
 
 .content {
@@ -197,6 +198,11 @@ body {
   margin: 45px 30px 100px 30px;
 }
 
+.main-content td{
+  font-size: 20px;
+  padding-left: 30px;
+  padding-top: 10px;
+}
 .main-content-wrapper{
   text-align: center;
 }
@@ -233,7 +239,6 @@ body {
   display: block;
   margin-top: 40px;
   padding-bottom: 10px;
-  //text-align: center;
 }
 
 .float {
@@ -318,4 +323,10 @@ body {
   font-size: 30px;
   margin-top: 20px;
   text-align: center;
+}
+
+.follow-user {
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: 10px;
 }
