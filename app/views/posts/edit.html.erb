@@ -1,16 +1,18 @@
 <div class="main-area">
   <div class="content">
     <h1>編集</h1>
-    <div class="main-content">
-      <%= form_tag("/posts/#{@post.id}/update") do %>
-       <p>病名</p>
-       <textarea name = "sick_name" rows="1"><%= @post.sick_name %></textarea>
-       <p>期間</p>
-       <textarea name = "period" rows="1"><%= @post.period %></textarea>
-       <p>内容</p>
-       <textarea name = "content" rows="6" cols="40"><%= @post.content %></textarea>
-       <p><input type ="submit" value="変更"></p>
-      <% end %>
+    <div class="main-content-wrapper">
+      <div class="main-content">
+        <%= form_tag("/posts/#{@post.id}/update") do %>
+        <p>病名</p>
+        <p><textarea name = "sick_name" rows="1"><%= @post.sick_name %></textarea></p>
+        <p>期間</p>
+        <p><textarea name = "period" rows="1"><%= @post.period %></textarea></p>
+        <p>内容</p>
+        <p><textarea name = "content" rows="6" cols="40"><%= @post.content %></textarea></p>
+        <p><input type ="submit" value="変更"></p>
+       <% end %>
+      </div>
     </div>
   </div>
 </div>
