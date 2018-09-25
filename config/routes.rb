@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'rooms/show'
   get '/' => 'pages#index'
   get 'pages/about'
 
   get 'posts/index'
   get 'users/new'
 
+  get "users/index" => "users#index"
   post 'users/login'
   get 'users/login_form'
   get 'users/logout'
@@ -31,6 +33,9 @@ Rails.application.routes.draw do
   get 'users/:id/followers' => 'users#followers'
 
   resources :relationships, only: [:create, :destroy]
+
+  resources :messages, :only => [:create]
+  resources :rooms, :only => [:create, :show]
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

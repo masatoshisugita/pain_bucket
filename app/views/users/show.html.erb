@@ -5,17 +5,31 @@
 
 
   <% if @user == @current_user %>
-  <div class="editrial">
-    <p><%= link_to('ログイン名とパスワードを変更',"/users/#{@user.id}/edit") %></p>
-    <p><%= link_to('いいね！一覧',"/users/#{@user.id}/likes") %></p>
-  </div>
+    <div class="editrial">
+      <p><%= link_to('ログイン名とパスワードを変更',"/users/#{@user.id}/edit") %></p>
+      <p><%= link_to('いいね！一覧',"/users/#{@user.id}/likes") %></p>
+    </div>
+  <% else %>
+  <div>
+    <% if @isRoom == true %>
+      <p class="chat-main-wrapper"><%= link_to('チャットへ',"/rooms/#{@userRoom_id}") %></p>
+    </div>
+    <% else %>
+    <div>
+      <%= form_for @room do |f| %>
+        <%= fields_for @entry do |e| %>
+          <%= e.hidden_field :user_id, :value=> @user.id %>
+          <% end %>
+        <%= f.submit(["チャットを始める"],class: 'chat-form') %>
+      <% end %>
+    </div>
+    <% end %>
   <% end %>
 
   <div class="follow-user">
     <%= render 'follow_form' %>
     <%= render 'stats' %>
   </div>
-
 
 
   <p2><%= @user.name %> の投稿一覧</p2>

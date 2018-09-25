@@ -17,6 +17,7 @@ body {
     width: 60%;
     height: auto;
     margin-top: 40px;
+    margin-bottom: 40px;
     background-color: rgba(106,192,255, 0.6);
     background-size: cover;
     position: absolute;
@@ -329,4 +330,31 @@ body {
   text-align: center;
   padding-top: 20px;
   margin-bottom: 10px;
+}
+
+.chat-wrapper{
+  width: 60%;
+  background-color: rgba(0,255,0, 0.6);
+  margin: 0 auto;
+  border-radius: 10px;
+  padding-left: 45px;
+  padding-right: 20px;
+  padding-bottom: 50px;
+}
+
+.chat-main-wrapper {
+  text-align:center;
+}
+
+.chat-form {
+  display: block;
+  margin: 0 auto;
+}
+
+.chat-form p {
+  font-size: 20px;
+}
+
+.form-submit{
+  margin-top: 20px;
 }
