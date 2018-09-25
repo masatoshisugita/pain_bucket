@@ -10,9 +10,9 @@
       <p><%= link_to('いいね！一覧',"/users/#{@user.id}/likes") %></p>
     </div>
   <% else %>
-  <div>
-    <% if @isRoom == true %>
-      <p class="chat-main-wrapper"><%= link_to('チャットへ',"/rooms/#{@userRoom_id}") %></p>
+    <div>
+      <% if @isRoom == true %>
+        <p class="chat-main-wrapper"><%= link_to('チャットへ',"/rooms/#{@userRoom_id}") %></p>
     </div>
     <% else %>
     <div>
