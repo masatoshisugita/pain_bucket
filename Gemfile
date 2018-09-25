@@ -52,7 +52,7 @@ group :development do
 end
 
 group :production do
-  #gem 'pg', '0.20.0' #gitからクローンした時はコメントアウトする
+  gem 'pg', '0.20.0' #gitからクローンした時はコメントアウトする
 end
 
 group :test do
