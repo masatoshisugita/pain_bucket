@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Sickness3</title>
+    <title>bucket</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -18,37 +18,109 @@
   <body>
     <header>
         <div class="top">
+
           <div class="main-contribution">
-          <%= link_to 'TOP','/',:style=>"color:white;",class: "contribution" %>
-          <%= link_to 'pain bucketとは','/pages/about', :style=>"color:white;",class: "contribution" %>
-        </div>
+              <div class="contribution"><%= link_to 'TOP','/',:style=>"color:white;" %></div>
+              <% if @current_user == nil %>
+              <div class="singnup-wrapper-modal contribution">新規登録はこちら</div>
+              <div class="login-wrapper-modal contribution">ログインはこちら</div>
+              <% end %>
+          </div>
+
 
         <div class="main-search">
           <div class="btn-contribution">
-          <% if @current_user %>
+            <% if @current_user %>
+            <%= link_to(@current_user.name ,"/users/#{@current_user.id}",:style=>"color:white",class: "top-index") %>
             <%= link_to '投稿はこちら','/posts/new', :style=>"color:white;",class: "top-index" %>
             <%= link_to 'ログアウトはこちら','/users/logout', :style=>"color:white;" %>
-          <% end %>
-        </div>
-          <div class ="btn-search">
-          <%= form_tag("/posts/search", :method => 'get') do %>
-          <div><span style="color:white">病名</span>
-            <%= text_field_tag :search, params[:search] %>
-            <%= submit_tag "検索" , :sick_name => nil %>
+            <% end %>
           </div>
-          <% end %>
+          <div class ="btn-search">
+            <%= form_tag("/posts/search", :method => 'get') do %>
+              <div class="search"><span style="color:white">病名</span>
+                <%= text_field_tag :search, params[:search] %>
+                <%= submit_tag "検索" , :sick_name => nil %>
+              </div>
+            <% end %>
           </div>
         </div>
 
       </div>
     </header>
 
+    <div class="modal" id="signup-modal">
+      <div class="main-area">
+        <div class="main-wrapper-area">
+          <div class="main-content">
+            <div class="close-modal">
+              <i class="fa fa-2x fa-times"></i>
+            </div>
+            <h1>ユーザー登録</h1>
 
-    <% if flash[:notice] %>
-      <div class="flash">
-        <p><%= flash[:notice] %></p>
+            <%= form_tag ("/users/create") do  %>
+             <div class="form">
+               <p>名前</p>
+               <p><input type="text" name = "name"></p>
+             </div>
+             <div class="form">
+               <p>パスワード</p>
+               <p><input name = "password" type="password"></p>
+               <p><input type ="submit" value="登録" class="submit"></p>
+             </div>
+            <% end %>
+          </div>
+        </div>
       </div>
-    <% end %>
+    </div>
+
+   <div class="modal" id="login-modal">
+     <div class="main-area">
+       <div class="main-wrapper-area">
+         <div class="main-content">
+           <div class="close-modal">
+            <i class="fa fa-2x fa-times"></i>
+           </div>
+         <h1>ログイン画面</h1>
+
+           <%= form_tag ("/users/login") do  %>
+             <div class="form">
+               <p>名前</p>
+               <p><input type="text" name = "name"></p>
+             </div>
+             <div class="form">
+               <p>パスワード</p>
+               <p><input name = "password" type="password"></p>
+               <p><input type ="submit" value="ログイン" class="login-submit"></p>
+             </div>
+           <% end %>
+         </div>
+       </div>
+     </div>
+   </div>
+
+   <% if flash[:notice] %>
+     <div class="flash">
+       <%= flash[:notice] %>
+     </div>
+   <% end %>
+
+<div class="search-wrapper">
+  <div class="search-container">
+   <%= form_tag("/", :method => 'get') do %>
+     <div class="search">
+       <%= text_field_tag  :sick_name %>
+       <%= submit_tag "検索"  %>
+     </div>
+     <% if @post_name %>
+     「<%= @post_name %>」の投稿数は：
+     <%= @post.count %>
+     <% else %>
+     ↑気になる病気の投稿数を検索！
+     <% end %>
+   <% end %>
+ </div>
+ </div>
 
 
   <%= yield %>

@@ -20,7 +20,9 @@ class PostsController < ApplicationController
 
   def search
     @posts = Post.search(params[:search])
+    @post_search = params[:search]
   end
+
 
   def show
     @post = Post.find_by(id: params[:id])
@@ -34,6 +36,7 @@ class PostsController < ApplicationController
     @post = Post.find_by(id: params[:id])
     @post.sick_name = params[:sick_name]
     @post.period = params[:period]
+    @post.initial_symptom = params[:initial_symptom]
     @post.content = params[:content]
     if @post.save
       flash[:notice] = "更新しました"
@@ -57,5 +60,5 @@ end
 private
 
 def post_params
-  params.permit(:sick_name, :period, :content ,:name)
+  params.permit(:sick_name, :period, :content ,:name,:initial_symptom)
 end

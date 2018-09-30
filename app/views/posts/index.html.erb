@@ -15,6 +15,7 @@
         <div class="float"><img src="<%= "/#{user.image}" %>"width="150" height="150"></div>
 
     <div class="head-index">
+
      <div class="index-body">
       <div class="head-index">名前</div>
       <div class="head-index"><p><%= link_to(post.name,"/users/#{post.user_id}") %></p></div>
@@ -31,8 +32,12 @@
      </div>
 
     </div>
+    <div class="time-index"><p><%= post.created_at.strftime('%Y/%m/%d %H:%M') %></p></div>
 
 
+      <div class="index-body"><p1>初期症状</p1>
+        <p><%= post.initial_symptom %></p>
+      </div>
       <div class="index-body"><p1>内容</p1>
       <p><%= post.content %></p>
       </div>

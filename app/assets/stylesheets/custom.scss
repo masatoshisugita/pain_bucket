@@ -1,57 +1,71 @@
 
-body {
+html,body {
   width: 100%;
-  background-image: image-url("notebook-731212_1920.jpg");
+  height: 100%;
+  //background-image: image-url("notebook-731212_1920.jpg");
   background-size: cover;
   background-attachment: fixed;
+  background-color: #999999;
 }
 
 .main-area {
   width: 60%;
   margin: 0 auto;
-  background-image: image-url("notebook-731212_1920.jpg");
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+  //background-image: image-url("notebook-731212_1920.jpg");
   background-size: cover;
+  background-attachment: fixed;
+}
+
+.about{
+  width: 100%;
+  height: 100%;
+  background-image: image-url("notebook-731212_1920.jpg");
+
 }
 
 .content {
-    width: 60%;
-    height: auto;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    background-color: rgba(106,192,255, 0.6);
-    background-size: cover;
-    position: absolute;
-    top: 60px;
-    border-radius: 40px;
-  }
+  width: 60%;
+  height: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background-color: #FFF;
+  position: absolute;
+  top: 100px;
+}
 
 .content img{
   border-radius: 40px;
-  background-color: white;
+  background-color: #AAAAAA;
   margin-top: 15px;
 }
 
-.btn {
-   display: inline-block;
-   border-radius: 8px;
- }
+.logo img{
+  display: block;
+  margin: 0 auto;
+  background-color: #FFF;
+  zoom: 1.5;
+  border-radius: 0px;
+  margin-top: 20px;
+}
 
- .contribution-left {
-   background-color: #FFCC00;
-   margin-right: 30px;
- }
+.contribution-left {
+  background-color: #FFCC00;
+  margin-right: 30px;
+}
 
- .contribution-right {
-   background-color: #B384FF;
- }
+.contribution-right {
+  background-color: #B384FF;
+}
 
- .singnup-wrapper-modal {
-   cursor: pointer;
-   background-color: #239b76;
-   font-size: 25px;
-   color: white;
-   margin-right: 20px;
- }
+.singnup-wrapper-modal {
+  cursor: pointer;
+  color: white;
+}
 
 .modal{
   position: fixed;
@@ -66,9 +80,7 @@ body {
 
 .login-wrapper-modal {
   cursor: pointer;
-  background-color: #136FFF;
   color: white;
-  font-size: 25px;
 }
 
 .main-wrapper-area {
@@ -88,33 +100,40 @@ body {
   cursor: pointer;
 }
 
+.flash {
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  text-align: center;
+  background-color: #CCCCCC;
+  color: black;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
 .top {
-   height: 60px;
-   background-color: #000;
-   background-size: cover;
-   padding: 20px 30px;
- }
+  height: 60px;
+  background-color: #000;
+  background-size: cover;
+}
 
- .flash {
-   background-color: #CCCCCC;
-   color: black;
-   height: 40px;
- }
-
- .flash p{
-   text-align: center;
-   padding-top: 10px;
-   font-size: 20px;
- }
+.main-contribution{
+  float: left;
+}
 
 .contribution {
-  margin-left: 30px;
+  height: 60px;
+  line-height: 60px;
+  vertical-align: middle;
+  padding-left: 40px;
+  float: left;
 }
 
 .contribution-wrapper{
   text-align: center;
   margin-bottom: 30px;
-
 }
 
 .contribution-wrapper p{
@@ -131,8 +150,9 @@ body {
   float: right;
 }
 
-.main-contribution{
-  float: left;
+.search{
+  height: 60px;
+  margin-top: 20px;
 }
 
 .main-search {
@@ -141,6 +161,9 @@ body {
 }
 
 .top-index{
+  height: 60px;
+  line-height: 60px;
+  vertical-align: middle;
   margin-right: 30px;
 }
 
@@ -157,8 +180,7 @@ body {
   font-size: 30px;
   padding-left: 30px;
 }
-.main-title h1 {
-  font-size:80px;
+.main-title h3 {
   text-align: center;
 }
 
@@ -170,6 +192,10 @@ body {
 .main-link {
   font-size: 25px;
   margin: 20px;
+}
+
+.bucket{
+  text-align: center;
 }
 
 .user-name {
@@ -204,6 +230,7 @@ body {
   padding-left: 30px;
   padding-top: 10px;
 }
+
 .main-content-wrapper{
   text-align: center;
 }
@@ -230,6 +257,7 @@ body {
   border-radius: 8px;
   margin-top: 20px;
 }
+
 .main-content p{
   font-size: 20px;
   margin-left: 30px;
@@ -247,18 +275,22 @@ body {
 }
 
 .head-index{
+  width: auto;
   font-size: 15px;
   margin-left: 10px;
   margin-top: 5px;
   float: left;
+}
 
+.time-index {
+  margin-left: 40px;
+  float: right;
 }
 
 .index-body {
   margin-left: 10px;
   padding-top: 5px;
   clear: left;
-
 }
 
 .main-content p2 {
@@ -272,7 +304,6 @@ body {
   float: left;
   left: 50%;
   margin-bottom: 30px;
-
 }
 
 .main-content li {
@@ -289,6 +320,7 @@ body {
   padding-right: 20px;
   padding-bottom: 50px;
   margin-bottom: 30px;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
 }
 
 .detail {
@@ -357,4 +389,19 @@ body {
 
 .form-submit{
   margin-top: 20px;
+}
+
+.search-wrapper{
+  //width: 100%;
+  //height: 100%;
+}
+
+.search-container{
+  width: 15%;
+  height: 50%;
+  background-color: #FFF;
+  position: absolute;
+  top: 140px;
+  left: 30px;
+  text-align: center;
 }

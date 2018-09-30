@@ -1,29 +1,21 @@
 <div class="main-area">
  <div class="content">
   <div class="main-title">
-    <h1>pain bucket</h1>
-    <p>〜病気になった時のためのSNSサイト〜</p>
-    <p><%= link_to 'pain bucketとは','/pages/about',class: "contribution" %></p>
+    <div class="logo"><%= image_tag("logo.jpg",:class => "logo") %></div>
+    <h3>〜病気になった時のためのSNSサイト〜</h3>
   </div>
 
     <div class="main-link">
-     <div class="user-name">
+      <div class="bucket"><%= link_to 'bucketとは','pages/about' %></div>
       <% if @current_user %>
-        <p>ログイン名</p>
-        <%= link_to(@current_user.name,"/users/#{@current_user.id}") %>
-    　</div>
     　<div class="contribution-wrapper">
         <p class="btn contribution-left"><%= link_to '投稿一覧はこちら','/posts/index' ,:style=>"color:white;" %></p>
         <p class="btn contribution-right"><%= link_to '投稿はこちら','/posts/new',:style=>"color:white;" %></p>
       </div>
       <% end %>
-      <% if @current_user == nil %>
-      <div class="user-login">
-        <div class=" btn singnup-wrapper-modal">新規登録はこちら</div>
-        <div class="btn login-wrapper-modal">ログインはこちら</div>
-      </div>
-      <% end %>
     </div>
+
+  
   </div>
 </div>
 
