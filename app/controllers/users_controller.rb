@@ -52,10 +52,13 @@ class UsersController < ApplicationController
   def update
     @user = User.find_by(id: params[:id])
     @user.name = params[:name]
+    @user.email = params[:email]
     @user.password = params[:password]
-    @user.image = "#{@user.id}.jpg"
-    image = params[:image]
-    File.binwrite("public/#{@user.image}",image.read)
+
+    if image = params[:image]
+      @user.image = "#{@user.id}.jpg"
+      File.binwrite("public/#{@user.image}",image.read)
+    end
 
     if @user.save
       flash[:notice] = "変更しました"
@@ -69,7 +72,7 @@ class UsersController < ApplicationController
   end
 
   def login
-    @user = User.find_by(name: params[:name],password: params[:password])
+    @user = User.find_by(name: params[:name],email: params[:email],password: params[:password])
     if @user
       session[:user_id] = @user.id
       flash[:notice] = "ログインに成功しました"
@@ -104,11 +107,13 @@ class UsersController < ApplicationController
     render 'show_follower'
   end
 
+  
+
 
    private
 
   def user_params
-    params.permit(:name, :password, :image)
+    params.permit(:name, :email,:password, :image)
   end
 
 end

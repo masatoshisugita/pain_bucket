@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_28_033709) do
+ActiveRecord::Schema.define(version: 2018_10_01_085324) do
 
   create_table "entries", force: :cascade do |t|
     t.integer "user_id"
@@ -32,7 +32,6 @@ ActiveRecord::Schema.define(version: 2018_09_28_033709) do
     t.datetime "updated_at", null: false
     t.integer "user_id"
     t.integer "room_id"
-    t.text "initial_symptom"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -68,6 +67,7 @@ ActiveRecord::Schema.define(version: 2018_09_28_033709) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image"
+    t.string "email"
   end
 
 end
