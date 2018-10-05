@@ -1,9 +1,73 @@
 <div class="main-area">
   <div class="content">
     <h1>詳細</h1>
-    <div class="main-content">
-    <div class="editrial"><%= link_to("投稿の変更","/posts/#{@post.id}/edit") %></div>
-    <div class="editrial"><%= link_to("投稿の削除","/posts/#{@post.id}/delete",{method: "post"}) %></div>
+    <% if  @current_user == @post.user %>
+      <div class="editrial"><%= link_to("投稿の変更","/posts/#{@post.id}/edit") %></div>
+      <div class="editrial"><%= link_to("投稿の削除","/posts/#{@post.id}/delete",{method: "post"}) %></div>
+    <% end %>
+      <div class="main-content">
+        <div class="main-post-content">
+
+          <% user = User.find_by(id: @post.user_id) %>
+            <div class="float"><img src="<%= "/#{user.image}" %>"width="150" height="150"></div>
+
+        <div class="head-index">
+
+         <div class="index-body">
+          <div class="head-index">名前</div>
+          <div class="head-index"><p><%= link_to(@post.name,"/users/#{@post.user_id}") %></p></div>
+         </div>
+
+         <div class="index-body">
+          <div class="head-index">病名</div>
+          <div class="head-index"><p><%= @post.sick_name %></p></div>
+         </div>
+
+         <div class="index-body">
+          <div class="head-index">期間</div>
+          <div class="head-index"><p><%= @post.period %></p></div>
+         </div>
+
+        </div>
+        <div class="time-index"><p><%= @post.created_at.strftime('%Y/%m/%d %H:%M') %></p></div>
+
+
+          <div class="index-body"><p1>初期症状</p1>
+            <p><%= @post.initial_symptom %></p>
+          </div>
+          <div class="index-body"><p1>内容</p1>
+          <p><%= @post.content %></p>
+          </div>
+
+          <div class="float-index">
+          <% if Like.find_by(user_id: @current_user.id,post_id: @post.id) %>
+            <%= link_to("/likes/#{@post.id}/destroy" , {method: "post"}) do %>
+              <span><i class="fa fa-heart unlike-like-btn fa-2x"></i></span>
+            <% end %>
+          <% else %>
+            <%= link_to("/likes/#{@post.id}/create" , {method: "post"}) do %>
+              <span><i class="fa fa-heart like-btn fa-2x"></i></span>
+            <% end %>
+          <% end %>
+          <% post_count = Post.find_by(id: @post.id) %>
+          <% likes_count = Like.where(post_id: post_count.id).count %>
+          <%= likes_count %>
+        </div>
+      </div>
+
+      <div>
+        <h4>コメント</h4>
+        <div id="comments_area"><!-- #① -->
+          <!-- 投稿されたコメント一覧をブログの詳細ページに表示するためのrender -->
+          <%= render partial: 'comments/index', locals: { comments: @comments } %>
+        </div>
+        <% if @current_user %>
+          <!-- コメント入力欄をブログの詳細ページに表示するためのrender -->
+          <%= render partial: 'comments/form', locals: { comment: @comment, post: @post } %>
+        <% end %>
+      </div>
+
+
     </div>
   </div>
 </div>

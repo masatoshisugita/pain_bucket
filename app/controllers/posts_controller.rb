@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user
+
+
   def index
     @posts = Post.all
   end
@@ -26,6 +29,8 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find_by(id: params[:id])
+    @comment = Comment.new
+    @comments = @post.comments
   end
 
   def edit
