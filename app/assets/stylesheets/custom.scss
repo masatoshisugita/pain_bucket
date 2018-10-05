@@ -166,19 +166,15 @@ html,body {
   margin-right: 30px;
 }
 
-.content h1,h2 {
+.content h1 {
   text-align: center;
 }
 
 .content h2{
-  color: red;
   font-weight: 700;
+  margin-left: 30px;
 }
 
-.content p2 {
-  font-size: 30px;
-  padding-left: 30px;
-}
 .main-title h3 {
   text-align: center;
 }
@@ -259,14 +255,18 @@ html,body {
 
 .main-content p{
   font-size: 20px;
-  margin-left: 30px;
 }
 
 .main-content p1 {
   font-size: 20px;
   display: block;
-  margin-top: 40px;
-  padding-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.main-content p2 {
+  font-size: 15px;
+  color: red;
 }
 
 .float {
@@ -292,25 +292,11 @@ html,body {
   clear: left;
 }
 
-.main-content p2 {
-  font-size: 40px;
-  display: inline;
-  padding-bottom: 60px;
+.index-body p {
+  display: block;
+  margin-left: 15px;
 }
 
-.main-content ol {
-  position: relative;
-  float: left;
-  left: 50%;
-  margin-bottom: 30px;
-}
-
-.main-content li {
-  padding-top: 30px;
-  font-size: 25px;
-  position: relative;
-  left: -50%;
-}
 
 .main-post-content {
   border: solid 6px #777777;
@@ -397,11 +383,6 @@ html,body {
   margin-top: 20px;
 }
 
-.search-wrapper{
-  //width: 100%;
-  //height: 100%;
-}
-
 .search-container{
   width: 15%;
   height: 50%;
@@ -410,4 +391,25 @@ html,body {
   top: 140px;
   left: 30px;
   text-align: center;
+}
+
+.box {
+    position: relative;
+    padding: 0.5em 0.7em;
+    margin: 2em 0;
+    background: #e6f4ff;
+    color: #5c98d4;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.box:after {
+    position: absolute;
+    content: '';
+    bottom: 100%;
+    left: 30px;
+    border: 20px solid transparent;
+    border-bottom: 20px solid #e6f4ff;
+    width: 0;
+    height: 0;
 }

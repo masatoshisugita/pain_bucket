@@ -1,3 +1,4 @@
+<div class="box2">
 <%= form_with(model: [post, comment] ) do |form| %>
   <div>
     <%= form.text_area :body %>
@@ -6,3 +7,4 @@
     <%= form.submit "コメントをする" %>
   </div>
 <% end %>
+</div>

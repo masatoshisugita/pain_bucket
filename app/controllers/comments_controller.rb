@@ -3,17 +3,17 @@ class CommentsController < ApplicationController
 
   def create
     @post = Post.find_by(id: params[:post_id])
-    @comment = @post.comments.new(comment_params)
+    @comment = @post.comments.build(comment_params)
     @comment.user_id = @current_user.id
      if @comment.save
-      render "/comments/js"
+      render :index
      end
   end
 
   def destroy
     @comment = Comment.find(params[:id])
     if @comment.destroy
-      render "/comments/js"
+      render :index
     end
   end
 
