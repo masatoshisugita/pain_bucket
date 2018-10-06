@@ -24,7 +24,6 @@ html,body {
   width: 100%;
   height: 100%;
   background-image: image-url("notebook-731212_1920.jpg");
-
 }
 
 .content {
@@ -53,12 +52,7 @@ html,body {
 }
 
 .contribution-left {
-  background-color: #FFCC00;
-  margin-right: 30px;
-}
-
-.contribution-right {
-  background-color: #B384FF;
+  background-color: #005FFF;
 }
 
 .singnup-wrapper-modal {
@@ -118,9 +112,6 @@ html,body {
   background-size: cover;
 }
 
-.main-contribution{
-  float: left;
-}
 
 .contribution {
   height: 60px;
@@ -189,9 +180,6 @@ html,body {
   margin: 20px;
 }
 
-.bucket{
-  text-align: center;
-}
 
 .user-name {
   margin-top: 30px;
@@ -397,10 +385,10 @@ html,body {
     position: relative;
     padding: 0.5em 0.7em;
     margin: 2em 0;
-    background: #e6f4ff;
-    color: #5c98d4;
+    background: #EEEEEE;
+    color: #444444;
     font-weight: bold;
-    margin-bottom: 30px;
+    border-radius: 16px;
 }
 
 .box:after {
@@ -409,7 +397,21 @@ html,body {
     bottom: 100%;
     left: 30px;
     border: 20px solid transparent;
-    border-bottom: 20px solid #e6f4ff;
+    border-bottom: 20px solid #EEEEEE;
     width: 0;
     height: 0;
+}
+
+
+.box p1{
+  font-size: 15px;
+  text-align: right;
+}
+
+.box p3{
+  font-size: 25px;
+}
+
+.actions{
+  margin-top: 20px;
 }

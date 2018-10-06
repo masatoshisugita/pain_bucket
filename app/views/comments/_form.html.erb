@@ -1,7 +1,7 @@
-<div class="box2">
+<div class="box3">
 <%= form_with(model: [post, comment] ) do |form| %>
   <div>
-    <%= form.text_area :body %>
+    <%= form.text_area :body ,:size => "80x5"%>
   </div>
   <div class="actions">
     <%= form.submit "コメントをする" %>
