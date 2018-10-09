@@ -17,6 +17,8 @@ class User < ApplicationRecord
     has_many :messages
     has_many :entries
 
+    has_secure_password
+
     def following?(other_user)
       following_relationships.find_by(following_id: other_user.id)
     end

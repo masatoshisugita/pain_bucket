@@ -74,8 +74,8 @@ class UsersController < ApplicationController
   end
 
   def login
-    @user = User.find_by(email: params[:email],password: params[:password])
-    if @user
+    @user = User.find_by(email: params[:email])
+    if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
       flash[:notice] = "ログインに成功しました"
       redirect_to("/")
@@ -115,7 +115,7 @@ class UsersController < ApplicationController
    private
 
   def user_params
-    params.permit(:name, :email,:password, :image)
+    params.permit(:name, :email,:password, :password_confirmation,:image)
   end
 
 end
