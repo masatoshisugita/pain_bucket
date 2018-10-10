@@ -11,6 +11,7 @@ html,body {
 .main-area {
   width: 60%;
   margin: 0 auto;
+
 }
 
 .container{
@@ -32,6 +33,8 @@ html,body {
   margin-bottom: 40px;
   //background-color: #DDDDDD;
   background-color: rgba(242,242,242,0.9);
+  border: solid 1px rgba(242,242,242,0.9);
+  box-shadow: 20px 20px 20px rgba(0,0,0,0.4);
   position: absolute;
   top: 100px;
 }
@@ -383,6 +386,8 @@ html,body {
 .search-container{
   width: 15%;
   height: 50%;
+  border: solid 1px #000;
+  box-shadow: 12px 12px 12px rgba(0,0,0,0.4);
   background-color: rgba(242,242,242,0.7);
   position: absolute;
   top: 140px;

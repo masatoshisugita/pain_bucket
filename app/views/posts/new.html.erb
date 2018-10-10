@@ -7,15 +7,15 @@
         <%= hidden_field_tag :name, @current_user.name %>
         <p>病名</p>
         <p2>※必須です</p2>
-        <p><input type ="text" name = "sick_name"></p>
+        <p><textarea type ="text" name = "sick_name" rows="1"></textarea></p>
         <p>期間</p>
-        <p><input type="text" name = "period"></p>
+        <p><textarea type="text" name = "period" rows="1"></textarea></p>
         <p>初期症状</p>
         <p2>※必須です</p2>
-        <p><input type="text" name = "initial_symptom"></p>
+        <p><textarea type="text" name = "initial_symptom" cols="30"></textarea></p>
         <p>内容</p>
         <p2>※必須です</p2>
-        <p><textarea name = "content" rows="8" cols="50"></textarea></p>
+        <p><textarea name = "content" rows="8" cols="50" placeholder="例）治療方法、入院の有無、大変だったこと、勇気が出たことなど何でも書きたいことを書きましょう！！"></textarea></p>
         <p><input type ="submit" value="投稿" class="submit"></p>
         <% end %>
       </div>
