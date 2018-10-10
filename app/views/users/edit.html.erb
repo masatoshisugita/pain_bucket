@@ -11,7 +11,11 @@
       <p>メールアドレス</p>
       <p><textarea name ="email" rows="1"><%= @user.email %></textarea></p>
       <p>パスワード</p>
+      <p2>※必須です</p2>
       <p><textarea name ="password" rows="1" type="password"><%= @user.password %></textarea></p>
+      <p>パスワード（確認）</p>
+      <p2>※必須です</p2>
+      <p><textarea name ="password_confirmation" rows="1" type="password"><%= @user.password %></textarea></p>
       <p><input type="submit" value="変更"></p>
      <% end %>
    </div>

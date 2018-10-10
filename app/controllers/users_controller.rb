@@ -56,7 +56,7 @@ class UsersController < ApplicationController
     @user.name = params[:name]
     @user.email = params[:email]
     @user.password = params[:password]
-
+    @user.password_confirmation = params[:password_confirmation]
     if image = params[:image]
       @user.image = "#{@user.id}.jpg"
       File.binwrite("public/#{@user.image}",image.read)
@@ -66,6 +66,7 @@ class UsersController < ApplicationController
       flash[:notice] = "変更しました"
       redirect_to("/users/#{@user.id}")
     else
+      flash[:notice] = "変更できませんでした（入力漏れに注意してください）"
       render("users/edit")
     end
   end
@@ -112,7 +113,7 @@ class UsersController < ApplicationController
 
 
 
-   private
+private
 
   def user_params
     params.permit(:name, :email,:password, :password_confirmation,:image)

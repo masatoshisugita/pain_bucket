@@ -13,11 +13,11 @@ class User < ApplicationRecord
     has_many :followers, through: :follower_relationships
 
 
-
-    has_many :messages
-    has_many :entries
+    has_many :messages,:dependent => :destroy
+    has_many :entries,:dependent => :destroy
 
     has_secure_password
+
 
     def following?(other_user)
       following_relationships.find_by(following_id: other_user.id)

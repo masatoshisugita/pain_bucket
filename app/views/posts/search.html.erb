@@ -1,40 +1,41 @@
 <div class="main-area">
-<div class="content">
-  <h1>" <%= @post_search %> "の検索結果</h1>
+  <div class="content">
+    <h1>" <%= @post_search %> "の検索結果</h1>
 
-  <div class="main-content">
-    <% @posts.each do |post| %>
-    <div class="main-post-content">
+    <div class="main-content">
+      <% @posts.each do |post| %>
+      <div class="main-post-content">
 
-      <% user = User.find_by(id: post.user_id) %>
-        <div class="float"><img src="<%= "/#{user.image}" %>"width="120" height="120"></div>
+        <% user = User.find_by(id: post.user_id) %>
+          <div class="float"><img src="<%= "/#{user.image}" %>"width="120" height="120"></div>
 
-      <div class="head-index">
-        <div class="index-body">
-        <div class="head-index">名前</div>
-        <div class="head-index"><p><%= post.name %></p></div>
-      </div>
+          <div class="head-index">
 
-      <div class="index-body">
-        <div class="head-index">病名</div>
-        <div class="head-index"><p><%= post.sick_name %></p></div>
-      </div>
+            <div class="index-body">
+              <div class="head-index">名前</div>
+              <div class="head-index"><p><%= link_to(post.name,"/users/#{post.user_id}") %></div>
+            </div>
 
-       <div class="index-body">
-         <div class="head-index">期間</div>
-         <div class="head-index"><p><%= post.period %></p></div>
-       </div>
+            <div class="index-body">
+              <div class="head-index">病名</div>
+              <div class="head-index"><p><%= post.sick_name %></p></div>
+            </div>
 
-       </div>
+            <div class="index-body">
+              <div class="head-index">期間</div>
+              <div class="head-index"><p><%= post.period %></p></div>
+            </div>
 
-       <div class="index-body"><p1>初期症状</p1>
-         <p><%= post.initial_symptom %></p>
-       </div>
-         <div class="index-body"><p1>内容</p1>
+          </div>
+
+          <div class="index-body"><p1>初期症状</p1>
+            <p><%= post.initial_symptom %></p>
+          </div>
+          <div class="index-body"><p1>内容</p1>
            <p><%= post.content %></p>
          </div>
+       </div>
+      <% end %>
     </div>
-    <% end %>
   </div>
-</div>
 </div>

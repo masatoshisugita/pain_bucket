@@ -55,6 +55,11 @@ html,body {
   background-color: #005FFF;
 }
 
+.modal-content{
+  background-color: #e6ecf0;
+  padding-bottom: 30px;
+}
+
 .singnup-wrapper-modal {
   cursor: pointer;
   color: white;
@@ -78,8 +83,8 @@ html,body {
 
 .main-wrapper-area {
   position: absolute;
-  background-color: #e6ecf0;
-  top: 20%;
+  //background-color: #e6ecf0;
+  top: 15%;
   left: 30%;
   width: 600px;
   border-radius: 8px;
@@ -280,6 +285,9 @@ html,body {
   clear: left;
 }
 
+.left{
+  text-align: left;
+}
 .index-body p {
   display: block;
   margin-left: 15px;
@@ -321,7 +329,7 @@ html,body {
 
 
 .form p{
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .treet {
@@ -386,9 +394,10 @@ html,body {
   position: relative;
   padding: 0.5em 0.7em;
   margin: 2em 0;
-  background: #DDFFFF;
+  background-color: rgba(242,242,242,0.7);
   color: #444444;
   font-weight: bold;
+  border: solid 6px #777777;
   border-radius: 16px;
 }
 
@@ -398,7 +407,7 @@ html,body {
   bottom: 100%;
   left: 30px;
   border: 20px solid transparent;
-  border-bottom: 20px solid #DDFFFF;
+  border-bottom: 20px solid #777777;
   width: 0;
   height: 0;
 }

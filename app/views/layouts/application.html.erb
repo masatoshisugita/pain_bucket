@@ -49,7 +49,7 @@
     <div class="modal" id="signup-modal">
       <div class="main-area">
         <div class="main-wrapper-area">
-          <div class="main-content">
+          <div class="modal-content">
             <div class="close-modal">
               <i class="fa fa-2x fa-times"></i>
             </div>
@@ -57,20 +57,20 @@
 
             <%= form_tag ("/users/create") do  %>
              <div class="form">
-               <p>名前</p>
+               <p1>名前</p1>
                <p><input type="text" name = "name"></p>
              </div>
              <div class="form">
-               <p>メールアドレス</p>
+               <p1>メールアドレス</p1>
                <p><input type="text" name = "email"></p>
              </div>
              <div class="form">
-               <p>パスワード</p>
+               <p1>パスワード</p1>
                <p><input name = "password" type="password"></p>
              </div>
                <div class="form">
-                 <p>パスワード（確認）</p>
-                 <p><input type="text" name = "password_confirmation"></p>
+                 <p1>パスワード（確認）</p1>
+                 <p><input type="password" name = "password_confirmation"></p>
                </div>
                <div class="form">
                <p><input type ="submit" value="登録" class="submit"></p>
@@ -84,7 +84,7 @@
    <div class="modal" id="login-modal">
      <div class="main-area">
        <div class="main-wrapper-area">
-         <div class="main-content">
+         <div class="modal-content">
            <div class="close-modal">
             <i class="fa fa-2x fa-times"></i>
            </div>
