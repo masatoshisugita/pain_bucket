@@ -58,12 +58,14 @@ class PostsController < ApplicationController
     redirect_to("/")
   end
 
-end
+
 
 
 
 private
 
-def post_params
-  params.permit(:sick_name, :period, :content ,:name,:initial_symptom)
+  def post_params
+    params.permit(:sick_name, :period, :content ,:name,:initial_symptom)
+  end
+
 end

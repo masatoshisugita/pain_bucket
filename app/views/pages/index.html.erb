@@ -1,9 +1,9 @@
 <div class="main-area">
- <div class="content">
-  <div class="main-title">
-    <div class="logo"><%= image_tag("logo.jpg",:class => "logo") %></div>
-    <h3>〜病気になった時のためのSNSサイト〜</h3>
-  </div>
+  <div class="content">
+    <div class="main-title">
+      <div class="logo"><%= image_tag("logo.jpg",:class => "logo") %></div>
+      <h3>〜病気になった時のためのSNSサイト〜</h3>
+    </div>
 
     <div class="main-link">
       <div class="main-content-wrapper"><%#= link_to 'bucketとは','pages/about' %></div>
@@ -14,58 +14,5 @@
       <% end %>
     </div>
 
-
-
-  </div>
-</div>
-
-
- <div class="modal" id="signup-modal">
-   <div class="main-area">
-     <div class="main-wrapper-area">
-       <div class="main-content">
-         <div class="close-modal">
-           <i class="fa fa-2x fa-times"></i>
-         </div>
-         <h1>ユーザー登録</h1>
-
-         <%= form_tag ("/users/create") do  %>
-          <div class="form">
-            <p>名前</p>
-            <p><input type="text" name = "name"></p>
-          </div>
-          <div class="form">
-            <p>パスワード</p>
-            <p><input name = "password" type="password"></p>
-            <p><input type ="submit" value="登録" class="submit"></p>
-          </div>
-         <% end %>
-       </div>
-     </div>
-   </div>
- </div>
-
-<div class="modal" id="login-modal">
-  <div class="main-area">
-    <div class="main-wrapper-area">
-      <div class="main-content">
-        <div class="close-modal">
-         <i class="fa fa-2x fa-times"></i>
-        </div>
-      <h1>ログイン画面</h1>
-
-        <%= form_tag ("/users/login") do  %>
-          <div class="form">
-            <p>名前</p>
-            <p><input type="text" name = "name"></p>
-          </div>
-          <div class="form">
-            <p>パスワード</p>
-            <p><input name = "password" type="password"></p>
-            <p><input type ="submit" value="ログイン" class="login-submit"></p>
-          </div>
-        <% end %>
-      </div>
-    </div>
   </div>
 </div>
