@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>bucket</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>bucket</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-  </head>
+</head>
 
 
-  <body>
-
-    <div class="container">
-   <% if flash[:notice] %>
-     <div class="flash">
-       <%= flash[:notice] %>
-     </div>
-   <% end %>
+<body>
+  <div class="container">
+    <% if flash[:notice] %>
+    <div class="flash">
+      <%= flash[:notice] %>
+    </div>
+    <% end %>
     <%= render 'layouts/header' %>
     <%= yield %>
     <%= render 'layouts/footer' %>
   </div>
-  </body>
+</body>
 </html>
