@@ -1,16 +1,16 @@
 <div class="main-area">
- <div class = "content">
-   <div class="main-content">
-     <h1>フォロワー</h1>
-   <% @user.followers.each do |user| %>
-  <table>
-<tr>
-  <td><img src="<%= "/#{user.image}" %>" width="100" height="100"></td>
-  <td><%= user.name %></td>
-  <td><%= link_to '詳細', "/users/#{user.id}" %></td>
-</tr>
-  </table>
-    <% end %>
+  <div class="content">
+    <div class="main-content">
+      <div class="center"><h1>フォロワー</h1></div>
+      <% @user.followers.each do |user| %>
+      <table>
+        <tr>
+          <td><img src="<%= "/#{user.image}" %>" width="100" height="100"></td>
+          <td><%= user.name %></td>
+          <td><%= link_to '詳細', "/users/#{user.id}" %></td>
+        </tr>
+      </table>
+      <% end %>
+    </div>
   </div>
- </div>
 </div>

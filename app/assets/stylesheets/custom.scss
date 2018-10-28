@@ -6,12 +6,27 @@ html,body {
   padding: 0;
   width: 100%;
   height: 100%;
-
   background-color: #999999;
 }
 
-/* footer */
-$gray-medium-light: #eaeaea;
+.center {
+  text-align: center;
+}
+.center h1 {
+  font-size: 40px;
+}
+
+.center p {
+  font-size: 25px;
+}
+
+.left{
+  text-align: left;
+}
+
+.float {
+  float: left;
+}
 
 .container{
   position: absolute;
@@ -25,17 +40,60 @@ $gray-medium-light: #eaeaea;
   padding: 0;
 }
 
+/* header */
 header {
   width: 100%;
   height: 60px;
   position: fixed;
 }
 
+.top {
+  height: 60px;
+  background-color: #000;
+  background-size: cover;
+}
+
+.contribution {
+  height: 60px;
+  line-height: 60px;
+  vertical-align: middle;
+  padding-left: 40px;
+  float: left;
+}
+
+.btn-search {
+  margin-right: 30px;
+  float: right;
+}
+
+.search{
+  height: 60px;
+  margin-top: 20px;
+}
+
+.main-search {
+  float: right;
+  margin-right: 30px;
+}
+
+.btn-contribution {
+  float: left;
+  margin-right: 40px;
+}
+
+.top-index{
+  height: 60px;
+  line-height: 60px;
+  vertical-align: middle;
+  margin-right: 30px;
+}
+
+/* footer */
 footer {
   width: 100%;
   height: 40px;
   background-color: #999;
-  border-top: 1px solid $gray-medium-light;
+  border-top: 1px solid #eaeaea;
   position: absolute;
   bottom: 0;
   text-align: center;
@@ -46,17 +104,99 @@ footer {
   vertical-align: middle;
 }
 
+/* 新規登録とログイン*/
+.singnup-wrapper-modal {
+  cursor: pointer;
+  color: white;
+}
+
+.modal{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+}
+
+.login-wrapper-modal {
+  cursor: pointer;
+  color: white;
+}
+
+.login-submit {
+  background-color: #136FFF;
+  color: #FFFFFF;
+  width: 50%;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.main-wrapper-area {
+  position: absolute;
+  top: 15%;
+  left: 30%;
+  width: 600px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.modal-content{
+  background-color: #e6ecf0;
+  padding-bottom: 30px;
+}
+
+.form p{
+  font-size: 20px;
+}
+
+.fa-times{
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+}
+
+/* flash */
+.flash {
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  text-align: center;
+  background-color: #FFF;
+  color: black;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+/* pages/index */
+.contribution-left {
+  background-color: #005FFF;
+}
+
+.contribution-wrapper{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contribution-wrapper p{
+  font-size: 25px;
+}
+.main-link {
+  font-size: 25px;
+  margin: 20px;
+}
+
+/* bodyの中心部分 */
 .main-area {
   width: 100%;
   margin-top: 120px;
   margin-bottom: 100px;
 }
-
-.about{
-  width: 100%;
-  height: 100%;
-}
-
 .content {
   width: 60%;
   margin: 0 auto;
@@ -81,164 +221,6 @@ footer {
   margin-top: 20px;
 }
 
-.contribution-left {
-  background-color: #005FFF;
-}
-
-.modal-content{
-  background-color: #e6ecf0;
-  padding-bottom: 30px;
-}
-
-.singnup-wrapper-modal {
-  cursor: pointer;
-  color: white;
-}
-
-.modal{
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: none;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 100;
-}
-
-.login-wrapper-modal {
-  cursor: pointer;
-  color: white;
-}
-
-.main-wrapper-area {
-  position: absolute;
-  //background-color: #e6ecf0;
-  top: 15%;
-  left: 30%;
-  width: 600px;
-  border-radius: 8px;
-  text-align: center;
-}
-
-.fa-times{
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  cursor: pointer;
-}
-
-.flash {
-  width: 100%;
-  height: 40px;
-  position: absolute;
-  top: 60px;
-  left: 0;
-  text-align: center;
-  background-color: #FFF;
-  color: black;
-  font-size: 20px;
-  padding-top: 10px;
-}
-
-.top {
-  height: 60px;
-  background-color: #000;
-  background-size: cover;
-}
-
-
-.contribution {
-  height: 60px;
-  line-height: 60px;
-  vertical-align: middle;
-  padding-left: 40px;
-  float: left;
-}
-
-.contribution-wrapper{
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.contribution-wrapper p{
-  font-size: 25px;
-}
-
-.btn-contribution {
-  float: left;
-  margin-right: 40px;
-}
-
-.btn-search {
-  margin-right: 30px;
-  float: right;
-}
-
-.search{
-  height: 60px;
-  margin-top: 20px;
-}
-
-.main-search {
-  float: right;
-  margin-right: 30px;
-}
-
-.top-index{
-  height: 60px;
-  line-height: 60px;
-  vertical-align: middle;
-  margin-right: 30px;
-}
-
-.content h1 {
-  text-align: center;
-}
-
-.content h2{
-  font-weight: 700;
-  margin-left: 30px;
-}
-
-.main-title h3 {
-  text-align: center;
-}
-
-.main-title p {
-  text-align: center;
-  font-size: 30px;
-}
-
-.main-link {
-  font-size: 25px;
-  margin: 20px;
-}
-
-
-.user-name {
-  margin-top: 30px;
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-.user-login {
-  margin-top: 30px;
-  text-align: center;
-}
-
-.topic {
-  text-align: center;
-}
-
-.topic h1 {
-  font-size: 60px;
-}
-
-.topic p {
-  font-size: 25px;
-}
-
 .main-content {
   margin: 45px 30px 100px 30px;
 }
@@ -247,6 +229,21 @@ footer {
   font-size: 20px;
   padding-left: 30px;
   padding-top: 10px;
+}
+.main-content p{
+  font-size: 20px;
+}
+
+.main-content p1 {
+  font-size: 20px;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.main-content p2 {
+  font-size: 15px;
+  color: red;
 }
 
 .main-content-wrapper{
@@ -268,36 +265,7 @@ footer {
   margin-top: 20px;
 }
 
-.login-submit {
-  background-color: #136FFF;
-  color: #FFFFFF;
-  width: 50%;
-  border-radius: 8px;
-  margin-top: 20px;
-}
-
-.main-content p{
-  font-size: 20px;
-}
-
-.main-content p1 {
-  font-size: 20px;
-  display: block;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.main-content p2 {
-  font-size: 15px;
-  color: red;
-}
-
-.float {
-  float: left;
-}
-
 .head-index{
-  width: auto;
   font-size: 15px;
   margin-left: 10px;
   margin-top: 5px;
@@ -309,16 +277,14 @@ footer {
   float: right;
 }
 
-.index-body {
+.body-index {
   margin-left: 10px;
   padding-top: 5px;
   clear: left;
 }
 
-.left{
-  text-align: left;
-}
-.index-body p {
+
+.body-index p {
   display: block;
   margin-left: 15px;
 }
@@ -332,6 +298,14 @@ footer {
   margin-bottom: 30px;
   box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
 }
+
+/* user/showのユーザーの名前 */
+.content h2{
+  font-weight: 700;
+  margin-left: 30px;
+}
+
+/* いいね機能　*/
 
 .unlike-like-btn {
   color: #FF5192;
@@ -351,21 +325,14 @@ footer {
   float: left;
 }
 
+/* 詳細リンク　*/
 .detail {
   font-size: 20px;
   margin-left: 10px;
   float: right;
 }
 
-
-.form p{
-  font-size: 20px;
-}
-
-.treet {
-  font-size: 30px;
-  text-align: center;
-}
+/* 投稿編集へのリンク　*/
 
 .editrial{
   font-size: 30px;
@@ -373,12 +340,15 @@ footer {
   text-align: center;
 }
 
+/* フォロー機能へのリンク */
+
 .follow-user {
   text-align: center;
   padding-top: 20px;
   margin-bottom: 10px;
 }
 
+/* チャット機能　*/
 .chat-wrapper{
   width: 60%;
   background-color: rgba(242,242,242,0.9);
@@ -410,18 +380,7 @@ footer {
   margin-top: 20px;
 }
 
-.search-container{
-  width: 15%;
-  height: 50%;
-  border: solid 1px #000;
-  box-shadow: 12px 12px 12px rgba(0,0,0,0.4);
-  background-color: rgba(242,242,242,0.7);
-  position: absolute;
-  top: 140px;
-  left: 30px;
-  text-align: center;
-}
-
+/* postに対してのcomment */
 .box {
   position: relative;
   padding: 0.5em 0.7em;

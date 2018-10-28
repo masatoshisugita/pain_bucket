@@ -1,7 +1,7 @@
 <div class="main-area">
  <div class = "content">
 
-  <div class="topic">
+  <div class="center">
       <h1>いいね！一覧</h1>
       <p>ログイン名</p>
       <p><%= @current_user.name %></p>
@@ -16,27 +16,27 @@
           <div class="float"><img src="<%= "/#{like.post.user.image}" %>" width="120" height="120"></div>
 
           <div class="head-index">
-            <div class="index-body">
+            <div class="body-index">
             <div class="head-index">名前</div>
             <div class="head-index"><p><%= link_to(post.name,"/users/#{post.user_id}") %></p></div>
           </div>
 
-          <div class="index-body">
+          <div class="body-index">
             <div class="head-index">病名</div>
             <div class="head-index"><p><%= post.sick_name %></p></div>
           </div>
 
-          <div class="index-body">
+          <div class="body-index">
              <div class="head-index">期間</div>
              <div class="head-index"><p><%= post.period %></p></div>
           </div>
           </div>
 
 
-            <div class="index-body"><p1>初期症状</p1>
+            <div class="body-index"><p1>初期症状</p1>
               <p><%= post.initial_symptom %></p>
             </div>
-            <div class="index-body"><p1>内容</p1>
+            <div class="body-index"><p1>内容</p1>
             <p><%= post.content %></p>
           </div>
 

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'posts/index'
   get 'users/new'
 
-  get "users/index" => "users#index"
+  get 'users/index'
 
   get 'users/login_form'
   post 'users/login'
