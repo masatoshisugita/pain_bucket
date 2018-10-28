@@ -9,7 +9,7 @@
         <div class="main-post-content">
 
           <% user = User.find_by(id: @post.user_id) %>
-            <div class="float"><img src="<%= "/#{user.image}" %>"width="150" height="150"></div>
+            <div class="float"><img src="<%= "#{user.image}" %>"width="150" height="150"></div>
 
         <div class="head-index">
 
