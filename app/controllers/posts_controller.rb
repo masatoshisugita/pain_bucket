@@ -22,7 +22,7 @@ class PostsController < ApplicationController
   end
 
   def search
-    @posts = Post.search(params[:search])
+    @posts = Post.reference(params[:search])
     @post_search = params[:search]
   end
 

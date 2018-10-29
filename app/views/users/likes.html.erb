@@ -13,7 +13,7 @@
      <% post = Post.find_by(id: like.post_id) %>
       <div class="main-post-content">
        <% user = User.find_by(id: like.user_id) %>
-          <div class="float"><img src="<%= "/#{like.post.user.image}" %>" width="120" height="120"></div>
+          <div class="float"><%= image_tag "/#{like.post.user.image}", :width => '120', :height => '120' %></div>
 
           <div class="head-index">
             <div class="body-index">

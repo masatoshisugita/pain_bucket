@@ -1,7 +1,7 @@
 <div class="main-area">
 <div class="content">
   <div class="center"><h1><%= @user.name %></h1></div>
-  <p style="text-align:center"><img src="<%= "/#{@user.image}" %>" width="120" height="120"></p>
+  <p style="text-align:center"><%= image_tag "/#{@user.image}", :width => '120', :height => '120' %></p>
 
 
   <% if @user == @current_user %>
@@ -36,7 +36,7 @@
   <div class="main-content">
     <% @posts.each do |post| %>
     <div class="main-post-content">
-      <div class="float"><img src="<%= "/#{@user.image}" %>"width="120" height="120"></div>
+      <div class="float"><%= image_tag "/#{post.user.image}", :width => '120', :height => '120' %></div>
 
      <div class="head-index">
 

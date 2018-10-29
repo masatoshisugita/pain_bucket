@@ -11,9 +11,9 @@ class Post < ApplicationRecord
 
   default_scope -> { order(created_at: :desc) }
 
-  def self.search(search)
-    if search
-      Post.where(['sick_name LIKE ?', "%#{search}%"])
+  def self.reference(check)
+    if check
+      Post.where(['sick_name LIKE ?', "%#{check}%"])
     else
       Post.all
     end
