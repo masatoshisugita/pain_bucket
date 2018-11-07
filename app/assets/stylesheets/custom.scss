@@ -1,12 +1,15 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
 
 html,body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  background-color: #999999;
+  background-image: image-url("notebook-731212_1920.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+
+
+  //background-color: #999999;
 }
 
 .center {
@@ -34,23 +37,22 @@ html,body {
   height: auto !important;
   height: 100%;
   min-height: 100%;
-  background-image: image-url("notebook-731212_1920.jpg");
-  background-size: cover;
-  background-attachment: fixed;
+  margin: 0;
   padding: 0;
+
 }
 
 /* header */
 header {
   width: 100%;
   height: 60px;
-  position: fixed;
 }
 
 .top {
+  width: 100%;
   height: 60px;
   background-color: #000;
-  background-size: cover;
+  margin: 0;
 }
 
 .contribution {
@@ -91,12 +93,14 @@ header {
 /* footer */
 footer {
   width: 100%;
-  height: 40px;
+  height: 60px;
   background-color: #999;
   border-top: 1px solid #eaeaea;
   position: absolute;
   bottom: 0;
   text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-wrapper{
@@ -192,21 +196,25 @@ footer {
 }
 
 /* bodyの中心部分 */
-.main-area {
+.row {
+  height: 100%;
   width: 100%;
   margin-top: 120px;
   margin-bottom: 100px;
+  //background-color: rgba(242,242,242,0.9);
+
+
 }
-.content {
-  width: 60%;
-  margin: 0 auto;
+
+.col-md-8 {
   background-color: rgba(242,242,242,0.9);
   border: solid 1px rgba(242,242,242,0.9);
   box-shadow: 20px 20px 20px rgba(0,0,0,0.4);
 
+
 }
 
-.content img{
+.row img{
   border-radius: 40px;
   background-color: #AAAAAA;
   margin-top: 15px;

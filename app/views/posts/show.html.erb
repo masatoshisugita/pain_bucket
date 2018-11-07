@@ -1,5 +1,5 @@
-<div class="main-area">
-  <div class="content">
+<div class="row">
+  <div class="col-md-offset-2 col-md-8">
     <div class="center"><h1>詳細</h1></div>
     <% if  @current_user == @post.user %>
       <div class="editrial"><%= link_to("投稿の変更","/posts/#{@post.id}/edit") %></div>
