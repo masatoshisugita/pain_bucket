@@ -9,20 +9,21 @@
       <% end %>
     </div>
 
+    <% if @current_user %>
     <div class="main-search">
       <div class="btn-contribution">
-        <% if @current_user %>
         <%= link_to(@current_user.name ,"/users/#{@current_user.id}",:style=>"color:white",class: "top-index") %>
         <%= link_to '投稿はこちら','/posts/new', :style=>"color:white;",class: "top-index" %>
         <%= link_to 'ログアウトはこちら','/users/logout', :style=>"color:white;" ,:method=>"post" %>
       </div>
+
       <div class ="btn-search">
         <%= form_tag("/posts/search", :method => 'get') do %>
         <div class="search"><span style="color:white">病名</span>
           <%= text_field_tag :search %>
           <%= submit_tag "検索" , :sick_name => nil %>
+          <% end %>
         </div>
-        <% end %>
         <% end %>
       </div>
     </div>
