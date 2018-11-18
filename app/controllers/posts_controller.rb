@@ -1,9 +1,9 @@
 class PostsController < ApplicationController
   before_action :authenticate_user
-
+   PER = 3
 
   def index
-    @posts = Post.all.includes(:user)
+    @posts = Post.page(params[:page]).per(PER)
   end
 
   def new
@@ -22,10 +22,15 @@ class PostsController < ApplicationController
   end
 
   def search
-    @posts = Post.reference(params[:search])
+    @posts = Post.reference(params[:search]).page(params[:page]).per(3)
     @post_search = params[:search]
   end
 
+  def search_symptom
+    @posts = Post.search_symptom(params[:symptom]).page(params[:page]).per(3)
+    @post_search_symptom = params[:symptom]
+
+  end
 
   def show
     @post = Post.find_by(id: params[:id])

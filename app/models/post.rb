@@ -19,7 +19,12 @@ class Post < ApplicationRecord
     end
   end
 
-
-
+  def self.search_symptom(check)
+    if check
+      Post.where(['initial_symptom LIKE ?', "%#{check}%"])
+    else
+      Post.all
+    end
+  end
 
 end

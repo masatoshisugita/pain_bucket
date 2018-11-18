@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   get 'posts/new'
   post 'posts/create'
   get 'posts/search'
+  get 'posts/search_symptom'
+
   get 'posts/:id' => 'posts#show'
   get 'posts/:id/edit' => 'posts#edit'
   post 'posts/:id/update' => 'posts#update'

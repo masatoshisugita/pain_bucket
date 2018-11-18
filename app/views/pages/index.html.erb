@@ -11,6 +11,14 @@
     　<div class="contribution-wrapper">
         <p class="btn contribution-left"><%= link_to '投稿一覧はこちら','/posts/index' ,:style=>"color:white;" %></p>
       </div>
+      <div class="center">
+      <%= form_tag("/posts/search", :method => 'get') do %>
+      <div class="search"><span style="color:black">病名</span>
+        <%= text_field_tag :search %>
+        <%= submit_tag "検索" , :sick_name => nil %>
+        <% end %>
+      </div>
+
       <% end %>
     </div>
 

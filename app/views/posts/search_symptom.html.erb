@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-md-offset-2 col-md-8">
+    <div class="center"><h1>初期症状"<%=  @post_search_symptom %>"の検索結果</h1></div>
+
+    <div class="main-content">
+      <% @posts.each do |post| %>
+      <div class="main-post-content">
+
+        <% user = User.find_by(id: post.user_id) %>
+        <div class="float"><%= image_tag "/#{post.user.image}", :width => '120', :height => '120' %></div>
+
+        <div class="head-index">
+
+          <div class="body-index">
+            <div class="head-index">名前</div>
+            <div class="head-index"><p><%= link_to(post.name,"/users/#{post.user_id}") %></div>
+            </div>
+
+            <div class="body-index">
+              <div class="head-index">病名</div>
+              <div class="head-index"><p><%= post.sick_name %></p></div>
+            </div>
+
+            <div class="body-index">
+              <div class="head-index">期間</div>
+              <div class="head-index"><p><%= post.period %></p></div>
+            </div>
+
+          </div>
+
+          <div class="body-index"><p1>初期症状</p1>
+            <p><%= post.initial_symptom %></p>
+          </div>
+          <div class="body-index"><p1>内容</p1>
+            <p><%= post.content %></p>
+          </div>
+      </div>
+      <% end %>
+      <div class="center"><%= paginate @posts %></div>
+
+    </div>
+  </div>
+</div>

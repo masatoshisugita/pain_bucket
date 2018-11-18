@@ -73,3 +73,6 @@ gem "font-awesome-rails"
 gem "jquery-rails"
 
 gem 'bcrypt'
+
+gem 'kaminari'
+gem 'kaminari-bootstrap'
