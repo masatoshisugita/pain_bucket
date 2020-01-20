@@ -1,21 +1,8 @@
 Rails.application.routes.draw do
 
-  get '/' => 'pages#index'
+  root to: "pages#index"
+
   get 'pages/about'
-
-  get 'posts/index'
-  get 'users/new'
-
-  get 'users/index'
-
-  get 'users/login_form'
-  post 'users/login'
-  post 'users/logout'
-  post 'users/create'
-  get 'users/:id' => 'users#show'
-  get 'users/:id/edit' => 'users#edit'
-  post 'users/:id/update' => 'users#update'
-
   get 'posts/index'
   get 'posts/new'
   post 'posts/create'
@@ -28,11 +15,11 @@ Rails.application.routes.draw do
   post 'posts/:id/delete' => 'posts#delete'
 
   post 'likes/:post_id/create' => 'likes#create'
-  post 'likes/:post_id/destroy' => 'likes#destroy'
-  get 'users/:id/likes' => 'users#likes'
+  post '/likes/:post_id/destroy' => 'likes#destroy'
+  get 'admin/users/:id/likes' => 'admin/users#likes'
 
-  get 'users/:id/following' => 'users#following'
-  get 'users/:id/followers' => 'users#followers'
+  get 'admin/users/:id/following' => 'admin/users#following'
+  get 'admin/users/:id/followers' => 'admin/users#followers'
 
   resources :relationships, only: [:create, :destroy]
 
@@ -45,5 +32,13 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+ #adimnルート
+  namespace :admin do
+    resources :users
+  end
+
+  get '/login',to: 'sessions#new'
+  post 'login',to: 'sessions#create'
+  delete '/logout',to: 'sessions#destroy'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

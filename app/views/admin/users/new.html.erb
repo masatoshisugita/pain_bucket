@@ -1,0 +1,24 @@
+<div id="bbb" class="row">
+  <div class="col-md-offset-2 col-md-8">
+    <h1>ユーザー登録</h1>
+    <div class="main-content">
+      <%= form_tag ("/users/create") do  %>
+      <div class="form">
+        <p>名前</p>
+        <input type="text" name = "name">
+      </div>
+      <div class="form">
+        <p>パスワード</p>
+        <input name = "password" type="password">
+        <div class="form-check">
+          <%= f.label :admin, class: 'form-check-label' do %>
+          <%= f.check_box :admin, class: 'form-check-input' %>
+          管理者権限
+          <% end %>
+        </div>
+        <input type ="submit" value="登録">
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

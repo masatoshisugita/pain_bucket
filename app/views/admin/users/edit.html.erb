@@ -1,0 +1,26 @@
+<div class="row">
+ <div class="col-md-offset-2 col-md-8">
+  <div class="center"><h1><%= @current_user.name %></h1></div>
+  <div class="main-content-wrapper">
+    <div class="main-content">
+     <%= form_tag(admin_users_path ,{multipart: true}) do %>
+      <p>画像</p>
+      <div class="straight"><input name="image" type="file"></div>
+      <p>ログイン名</p>
+      <p2>※必須です</p2>
+      <p><textarea name ="name" rows="1" cols="30"><%= @user.name %></textarea></p>
+      <p>メールアドレス</p>
+      <p2>※必須です</p2>
+      <p><textarea name ="email" rows="1" cols="30"><%= @user.email %></textarea></p>
+      <p>パスワード</p>
+      <p2>※必須です</p2>
+      <p><textarea name ="password" rows="1" type="password"><%= @user.password %></textarea></p>
+      <p>パスワード（確認）</p>
+      <p2>※必須です</p2>
+      <p><textarea name ="password_confirmation" rows="1" type="password"><%= @user.password %></textarea></p>
+      <p><input type="submit" value="変更"></p>
+     <% end %>
+   </div>
+  </div>
+ </div>
+</div>
