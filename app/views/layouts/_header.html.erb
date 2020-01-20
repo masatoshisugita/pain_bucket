@@ -13,9 +13,9 @@
     <div class="main-search">
       <div class="btn-contribution">
 
-        <%= link_to(@current_user.name ,"/users/#{@current_user.id}",:style=>"color:white",class: "top-index") %>
+        <%= link_to(@current_user.name ,"/admin/users/#{@current_user.id}",:style=>"color:white",class: "top-index") %>
         <%= link_to '投稿はこちら','/posts/new', :style=>"color:white;",class: "top-index" %>
-        <%= link_to 'ログアウトはこちら','/users/logout', :style=>"color:white;" ,:method=>"post" %>
+        <%= link_to 'ログアウトはこちら',"/logout", :style=>"color:white;" ,:method=>"delete" %>
       </div>
 
       <div class ="btn-search">
@@ -43,7 +43,7 @@
           </div>
           <h1>ユーザー登録</h1>
 
-          <%= form_tag ("/users/create") do  %>
+          <%= form_tag admin_users_path(@user) do |f| %>
           <div class="form">
             <p1>名前</p1>
             <p><input type="text" name = "name"></p>
@@ -59,6 +59,10 @@
           <div class="form">
             <p1>パスワード（確認）</p1>
             <p><input type="password" name = "password_confirmation"></p>
+          </div>
+          <div class="form">
+            <input type="checkbox" name="admin" value="admin">
+            管理者権限
           </div>
           <div class="form">
             <p><input type ="submit" value="登録" class="submit"></p>
@@ -78,7 +82,7 @@
           </div>
           <h1>ログイン画面</h1>
 
-          <%= form_tag ("/users/login") do  %>
+          <%= form_tag ("/login") do  %>
 
           <div class="form">
             <p>メールアドレス</p>
